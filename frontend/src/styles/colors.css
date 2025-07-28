@@ -1,0 +1,26 @@
+:root {
+  /* Chip Colors */
+  --chip-1: #3b82f6;    /* $1 - Blue */
+  --chip-5: #ef4444;    /* $5 - Red */
+  --chip-25: #10b981;   /* $25 - Green */
+  --chip-100: #000000;  /* $100 - Black */
+  --chip-500: #8b5cf6;  /* $500 - Purple */
+
+  /* Table Colors */
+  --felt-green: #0a5c36;
+  --table-rail: #2a2118;
+  --accent-gold: #d4af37;
+  
+  /* Semantic Names */
+  --primary: var(--felt-green);
+  --secondary: var(--table-rail);
+.chip-1 {
+  background: var(--chip-1);
+  border: 2px solid color-mix(in srgb, var(--chip-1) 90%, white);
+}
+  --highlight: var(--accent-gold);
+}
+--chip-1-text: color-contrast(var(--chip-1) vs white, black);
+[data-theme="dark"] {
+    --felt-green: #0d3d24;
+}

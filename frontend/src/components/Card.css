@@ -1,0 +1,67 @@
+/* Card container */
+.card-container {
+  position: relative;
+  height: calc(1.4 * var(--width, 80px));
+  display: inline-block;
+}
+
+/* Card image */
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Corner indicators */
+.card-corner {
+  position: absolute;
+  width: 25%;
+  text-align: center;
+  font-size: calc(0.2 * var(--width, 80px));
+  z-index: 2;
+}
+
+.top-left {
+  top: 5%;
+  left: 5%;
+}
+
+.bottom-right {
+  bottom: 5%;
+  right: 5%;
+  transform: rotate(180deg);
+}
+
+/* Suit colors */
+.suit-icon.spade, 
+.suit-icon.club { 
+  color: black; 
+}
+
+.suit-icon.heart, 
+.suit-icon.diamond { 
+  color: red; 
+}
+/* Ensure hardware acceleration */
+.card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Fix for absolute positioning during animations */
+.animated-card-wrapper {
+  position: relative;
+  display: inline-block;
+}
+/* Prevent layout shift during animations */
+.animated-card {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/* 3D perspective for flip animations */
+.flip-container {
+  perspective: 1000px;
+}

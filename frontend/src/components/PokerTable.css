@@ -1,0 +1,18 @@
+/* src/components/PokerTable.css */
+.poker-table {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #0a5c36; /* Felt green */
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.community-cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}

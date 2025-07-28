@@ -1,0 +1,24 @@
+/* Burn effects */
+.burn-particle {
+  position: absolute;
+  background: #ff6b00;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 100;
+}
+
+.burn-embers {
+  animation: 
+    ember-fade 1.2s ease-out forwards,
+    ember-drift linear forwards;
+}
+
+@keyframes ember-fade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.3); }
+}
+
+@keyframes ember-drift {
+  to { transform: translate(var(--drift-x), var(--drift-y)); }
+}
